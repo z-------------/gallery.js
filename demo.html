@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>gallery.js demo page</title>
+        <script src="gallery.js"></script>
+        <style>
+            * {
+                font-family:sans-serif;
+                box-sizing:border-box;
+            }
+            
+            #gallery-container {
+                height:300px;
+                width:485px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>gallery.js demo page</h1>
+        <div id="gallery-container"></div>
+        <input type="button" onclick="galleryJS.prev()" value="Prev slide">
+        <input type="button" onclick="galleryJS.next()" value="Next slide">
+        
+        <script>
+            var images = ["http://upload.wikimedia.org/wikipedia/commons/5/5b/Waffles_with_Strawberries.jpg","http://blog.cashcrate.com/wp-content/uploads/2013/08/Waffles.jpg",
+                          "http://www.edrants.com/wp-content/uploads/2012/01/waffles.jpg","http://www.100daysofrealfood.com/wp-content/uploads/2010/07/waffle-stack1.jpg",
+                          "http://www.lach-ortho.com/blog/wp-content/uploads/2012/04/waffles.jpg"];
+            galleryJS.init("#gallery-container",images,1);
+        </script>
+    </body>
+</html>
